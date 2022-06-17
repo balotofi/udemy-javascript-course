@@ -20,9 +20,11 @@
         alert("Do enjoy this app" + yourName);
 
         var value1 = prompt("enter the first value") ;
-        var value2 = ("enter the second value");
+        var value2 = prompt("enter the second value");
         var total = Number(value1) + Number(value2);
         alert("the total is " + total);
+        var message = (Number(value1) > Number(value2)) ? "First is bigger" : "First is smaller";
+        alert(message);
 
         var a = 5;
         var b = 10;
@@ -34,7 +36,7 @@
         
         console.log(typeof a == "number");
         console.log(typeof c == typeof "number");     
-        console.log((d=="odd" && !(b<5) && b >= (a*2)));
+        console.log((d=="odd" && !(b<5) || b >= (a*2)));
         
         
         
