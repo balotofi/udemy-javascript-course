@@ -6,14 +6,20 @@
     <body>
         <script>
 
-            var tasksArray = ['eat breakfast', 'attend team meeting', 'call mentor', 'blend tomatoes', 'wash clothes', 'read SMP documentation']; //literal array
+            var tasksArray = ['cook breakfast','eat breakfast', 'attend team meeting', 'call mentor', 'blend tomatoes', 'wash clothes', 'read SMP documentation', 'go to sleep']; //literal array
             var taskProgressArray = ['done', 'incomplete', 'not started'];
-            var question1 = prompt('What task to specify progress on? 1-6');
+
+            tasksArray[tasksArray.length] = 'new task';
+
+            console.log("The last thing you are going to do today is " + tasksArray[(tasksArray.length-1)]);
+            console.log(tasksArray);
+        /*
+            var question1 = prompt('What task to specify progress on? 1-'+tasksArray.length+'');
             var question2 = prompt('Specify status: 1 = done 2 = incomplete 3 = not started');
             // var myArray = new Array()
 
             console.log("Today you will " + tasksArray[(question1-1)] + ". Status of task = " + taskProgressArray[(question2-1)]); // return string
-        
+        */
         </script>
     </body>
 </html>
