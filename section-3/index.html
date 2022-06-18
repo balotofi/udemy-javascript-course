@@ -6,6 +6,11 @@
     <body>
         <script>
 
+            var animals = ['cat', 'dog', 'parrot', 'goldfish', 'bear', 'goose', 'seagull', 'chicken', 'goat', 'duck'];
+            randomIndex = Math.floor(Math.random()*animals.length);
+            console.log(animals[randomIndex]);
+
+        /*
             var tasksArray = ['cook breakfast','eat breakfast', 'attend team meeting', 'call mentor', 'blend tomatoes', 'wash clothes', 'read SMP documentation', 'go to sleep']; //literal array
             var taskProgressArray = ['done', 'incomplete', 'not started'];
 
@@ -13,7 +18,7 @@
 
             console.log("The last thing you are going to do today is " + tasksArray[(tasksArray.length-1)]);
             console.log(tasksArray);
-        /*
+        
             var question1 = prompt('What task to specify progress on? 1-'+tasksArray.length+'');
             var question2 = prompt('Specify status: 1 = done 2 = incomplete 3 = not started');
             // var myArray = new Array()
