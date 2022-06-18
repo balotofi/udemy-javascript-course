@@ -1,18 +1,18 @@
 <!DOCTYPE html>
 <html>
     <Head>
-        <title>The Compplete Javascript Course Section 3</title>
+        <title>The Complete Javascript Course Section 3</title>
     </Head>
     <body>
         <script>
 
             var tasksArray = ['eat breakfast', 'attend team meeting', 'call mentor', 'blend tomatoes', 'wash clothes', 'read SMP documentation']; //literal array
-            var taskProgressArray = ['done', 'not started', 'incomplete'];
-            var question1 = prompt('What task to specify progress on? 0-5');
-            var question2 = prompt('Specify status: 0 = done 2 = incomplete 1 = not started');
+            var taskProgressArray = ['done', 'incomplete', 'not started'];
+            var question1 = prompt('What task to specify progress on? 1-6');
+            var question2 = prompt('Specify status: 1 = done 2 = incomplete 3 = not started');
             // var myArray = new Array()
 
-            console.log("Today you will " + tasksArray[Number(question1)] + ". Status of task = " + taskProgressArray[Number(question2)]); // return string
+            console.log("Today you will " + tasksArray[(question1-1)] + ". Status of task = " + taskProgressArray[(question2-1)]); // return string
         
         </script>
     </body>
