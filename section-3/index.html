@@ -6,9 +6,28 @@
     <body>
         <script>
 
-            var animals = ['cat', 'dog', 'parrot', 'goldfish', 'bear', 'goose', 'seagull', 'chicken', 'goat', 'duck'];
-            randomIndex = Math.floor(Math.random()*animals.length);
-            console.log(animals[randomIndex]);
+            var animals = ['cat', 'dog', 'parrot', 'rabbit', 'goldfish', 'bear', 'goose', 'seagull', 'chicken', 'goat', 'duck', 'zebra'];
+            
+            animals.push("sheep"); // add item to end of array
+            var removeEnd = animals.pop(); // remove last item from end of array
+            
+            animals.shift(); // remove first item from array
+            animals.unshift('horse'); // add first item to array
+
+            animals.splice(2,1); // remove from position, number of items
+
+            animals.reverse() //reverses order of items
+
+            animals.sort() // sort items by value, numerically, alphabetically
+
+            console.log(removeEnd);
+            console.log(animals);
+            
+            // randomIndex = Math.floor(Math.random()*animals.length);
+            // var randomAnimal = animals[randomIndex];
+            // var message = prompt('What index value is ' + randomAnimal);
+            // var response = (message == randomIndex) ? "Correct!" : "Wrong, it was " + randomIndex
+            // alert(response);
 
         /*
             var tasksArray = ['cook breakfast','eat breakfast', 'attend team meeting', 'call mentor', 'blend tomatoes', 'wash clothes', 'read SMP documentation', 'go to sleep']; //literal array
@@ -25,6 +44,7 @@
 
             console.log("Today you will " + tasksArray[(question1-1)] + ". Status of task = " + taskProgressArray[(question2-1)]); // return string
         */
+        
         </script>
     </body>
 </html>
