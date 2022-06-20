@@ -7,7 +7,15 @@
         <script>
 
             var animals = ['cat', 'dog', 'parrot', 'rabbit', 'goldfish', 'bear', 'goose', 'seagull', 'chicken', 'goat', 'duck', 'zebra'];
-            
+            animals.reverse();
+            animals.shift();
+            animals.unshift("horse");
+            animals.fill(1,6,"fish");
+            animals.push("sheep");
+            console.log(animals);
+
+
+          /*
             animals.push("sheep"); // add item to end of array
             var removeEnd = animals.pop(); // remove last item from end of array
             
@@ -29,7 +37,7 @@
             // var response = (message == randomIndex) ? "Correct!" : "Wrong, it was " + randomIndex
             // alert(response);
 
-        /*
+        
             var tasksArray = ['cook breakfast','eat breakfast', 'attend team meeting', 'call mentor', 'blend tomatoes', 'wash clothes', 'read SMP documentation', 'go to sleep']; //literal array
             var taskProgressArray = ['done', 'incomplete', 'not started'];
 
