@@ -6,14 +6,19 @@
     <body>
         <script>
 
+            myLaptop = {colour:'black', screenSize:'21"', backlit:'no', stickers:'yes'};
+            var prop = prompt('what property do you wanna see?');
+            var answer = myLaptop[prop];
+            console.log( 'The ' + prop + ' of my laptop is ' + answer);
+        
+            /*
             var arr = ['zara', 'mulu','yiddeh',2003,2018,2021];
             for(var x in arr){
                 console.log(x);
                 console.log(arr[x]);
             }
             console.log(arr);
-            
-        /*    
+    
             var arr = [['zara', 'mulu','yiddeh'], [2003,2018,2021]];
             var question = prompt('which friend are you looking for?');
             console.log('you met ' + arr[0][question] + ' in ' + arr[1][question]);
