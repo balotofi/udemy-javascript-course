@@ -6,10 +6,23 @@
     <body>
         <script>
 
-            var animals = ['cat', 'dog', 'parrot', 'rabbit', 'bird'];
+            var arr = [3,55,66,7,57,34,82,21,'cat','dog'];
+            arr.sort();
+            console.log(arr);
+            var question  = prompt('what do you want to remove?');
+            var finder = arr.indexOf(question);
+            var newVal = (finder > -1) ? arr.splice(finder,1): false;
+            console.log(newVal);
+            console.log(arr);
             
-            
+
             /*
+            var animals = ['cat', 'dog', 'rabbit', 'bird'];
+            question = prompt('What animal are you looking for?');
+            var positionIndex = animals.indexOf(question);
+            message = positionIndex > -1 ? 'found' : 'not there';
+            console.log(message);
+            
             animals.reverse();
             animals.shift();
             animals.unshift("horse");
