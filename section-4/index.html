@@ -4,17 +4,26 @@
         <title> The Complete Javascript Course Section 4</title>
     </head>
     <body>
-        <div id="output">My name is Kenny</div>
+        <div id="output">  </div>
         <input type="text" id="val">
         
         <script>
+            var user_name = prompt('what is your name?');
+            var output = document.getElementById('output')
+            output.innerText = 'Welcome to the tittybar, ' + user_name
 
+
+/*
+            // teachers method = 
+            var output = document.getElementById('output')
+            var val = document.getElementById('val')
+            val.value = output.innerText
+            
+            // my method = 
             console.log(document.getElementById('output').innerText)
             console.log(document.getElementById('val').value)
-
             document.getElementById('val').value = document.getElementById('output').innerText
 
-        /*
             document.getElementById("name").innerHTML = "Welcome back to my page";
 
             var output = document.getElementById("name");
