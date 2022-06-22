@@ -4,9 +4,14 @@
         <title> The Complete Javascript Course Section 5 </title>
     </head>
     <body>
+        <div id="output">Ternary Operator</div>
         <script>
 
-            var newSection = logicTime;
+            var output = document.getElementById('output');
+            var login = false;
+            var outputHolder = '';
+            var userOkay = login == true ? outputHolder = 'true' : outputHolder = 'not true';
+            output.innerHTML = userOkay
 
         </script>
     </body>
