@@ -7,13 +7,26 @@
         <div id="output">Ternary Operator</div>
         <script>
 
+            // var output = document.getElementById('output');
+            // var login = true;
+            // var outputHolder = '';
+            // var userOkay = login ? outputHolder = 'true' : outputHolder = 'false';
+            // output.innerHTML = userOkay;
+            
+            // login ? alert('okay') : alert('denied');
+            
+            // var userNames = ['Helen', 'Wendy', 'Mike', 'Marty', 'Jude', 'Ben', 'Ruth', 'Wyatt', 'Darlene'];
+            // var response = prompt('what is your username?');
+            // var userAvailable = userNames.indexOf(response) != -1 ? true : false;
+            // var output = document.getElementById('output');
+            // output.innerHTML = userAvailable ? 'Welcome' : 'Access denied';
+            // output.innerHTML += ',' + response ;
+            
+            var userNames = ['Helen', 'Wendy', 'Mike', 'Marty', 'Jude', 'Ben', 'Ruth', 'Wyatt', 'Darlene'];
+            var response = prompt('what is your username?');
             var output = document.getElementById('output');
-            var login = false;
-            var outputHolder = '';
-            var userOkay = (login == true) ? outputHolder = 'true' : outputHolder = 'not true';
-            output.innerHTML = userOkay;
-            var newSection = logicTime;
-            console.log("finish this tomorrow");
+            output.innerHTML = userNames.indexOf(response) != -1 ? 'Welcome' : 'Access denied';
+            output.innerHTML += ',' + response ;
 
         </script>
     </body>
