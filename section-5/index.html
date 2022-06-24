@@ -4,23 +4,43 @@
         <title> The Complete Javascript Course Section 5 </title>
     </head>
     <body>
-        <div id="output">Ternary Operator</div>
+        <div id="output">If Else Statements</div>
         <script>
-
-            // var output = document.getElementById('output');
-            // var login = true;
-            // var outputHolder = '';
-            // var userOkay = login ? outputHolder = 'true' : outputHolder = 'false';
-            // output.innerHTML = userOkay;
+        
+        var myTime = 13;
+        var output = document.getElementById('output');
+        
+        if (myTime>=8 &&  myTime<12){
+            output.innerHTML = 'Wake up, it\'s morning';
+        }
+        else if (myTime>=12 && myTime<13 ) {
+            output.innerHTML = 'Go to Lunch';
+        }
+        else if (myTime>=13 && myTime<=16 ) {
+            output.innerHTML = 'Dinner time';
+        }
+        else if (myTime>16 && myTime<20 ) {
+            output.innerHTML = 'Dinner time';
+        }
+        else {
+            output.innerHTML = 'Its evening, go to sleep';
+        }
+        
+        /*
+            var output = document.getElementById('output');
+            var login = true;
+            var outputHolder = '';
+            var userOkay = login ? outputHolder = 'true' : outputHolder = 'false';
+            output.innerHTML = userOkay;
             
-            // login ? alert('okay') : alert('denied');
+            login ? alert('okay') : alert('denied');
             
-            // var userNames = ['Helen', 'Wendy', 'Mike', 'Marty', 'Jude', 'Ben', 'Ruth', 'Wyatt', 'Darlene'];
-            // var response = prompt('what is your username?');
-            // var userAvailable = userNames.indexOf(response) != -1 ? true : false;
-            // var output = document.getElementById('output');
-            // output.innerHTML = userAvailable ? 'Welcome' : 'Access denied';
-            // output.innerHTML += ',' + response ;
+            var userNames = ['Helen', 'Wendy', 'Mike', 'Marty', 'Jude', 'Ben', 'Ruth', 'Wyatt', 'Darlene'];
+            var response = prompt('what is your username?');
+            var userAvailable = userNames.indexOf(response) != -1 ? true : false;
+            var output = document.getElementById('output');
+            output.innerHTML = userAvailable ? 'Welcome' : 'Access denied';
+            output.innerHTML += ',' + response ;
             
             var userNames = ['Helen', 'Wendy', 'Mike', 'Marty', 'Jude', 'Ben', 'Ruth', 'Wyatt', 'Darlene'];
             var response = prompt('what is your username?');
@@ -37,6 +57,8 @@
                 htmlOutput = 'denied, was not true';
             }
             output.innerHTML = htmlOutput + ' ' + response;
+
+        */    
             
         </script>
     </body>
