@@ -25,9 +25,19 @@
             var userNames = ['Helen', 'Wendy', 'Mike', 'Marty', 'Jude', 'Ben', 'Ruth', 'Wyatt', 'Darlene'];
             var response = prompt('what is your username?');
             var output = document.getElementById('output');
-            output.innerHTML = userNames.indexOf(response) != -1 ? 'Welcome' : 'Access denied';
-            output.innerHTML += ',' + response ;
-
+            var htmlOutput = '';
+            
+            if (userNames.indexOf(response) != -1) {
+                alert('hello');
+                htmlOutput = 'Welcome, it was true' ;
+                var age = prompt('age');
+                htmlOutput += age > 18 ? 'you are over 18' : 'you are under 18';
+            }
+            else {
+                htmlOutput = 'denied, was not true';
+            }
+            output.innerHTML = htmlOutput + ' ' + response;
+            
         </script>
     </body>
 </html>
