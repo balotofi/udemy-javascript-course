@@ -4,29 +4,53 @@
         <title> The Complete Javascript Course Section 5 </title>
     </head>
     <body>
-        <div id="output">If Else Statements</div>
+        <div id="output">Switch Statements</div>
         <script>
         
-        var myTime = 13;
+            var myTime = prompt('what time is it? (24hrs)');
+            var output = document.getElementById('output');
+            var html;
+
+            switch(Number(myTime)){
+                case 8:
+                    html = 'wake up time';
+                    break;
+                case 12: 
+                    html = 'lunch';
+                    break;
+                case 16: 
+                    html = 'dinner';
+                default:
+                    html = 'nothing togit do';
+            }
+
+            output.innerHTML = html;
+        
+        
+        /*
+        var myTime = prompt('what time is it? (24hrs)');
         var output = document.getElementById('output');
         
-        if (myTime>=8 &&  myTime<12){
+        if (myTime>=7 &&  myTime<12){
             output.innerHTML = 'Wake up, it\'s morning';
         }
         else if (myTime>=12 && myTime<13 ) {
             output.innerHTML = 'Go to Lunch';
         }
         else if (myTime>=13 && myTime<=16 ) {
+            output.innerHTML = 'Back to work';
+        }
+        else if (myTime>16 && myTime<=20 ) {
             output.innerHTML = 'Dinner time';
         }
-        else if (myTime>16 && myTime<20 ) {
-            output.innerHTML = 'Dinner time';
-        }
-        else {
+        else if (myTime>20 && myTime<22 ) {
             output.innerHTML = 'Its evening, go to sleep';
         }
+        else {
+            output.innerHTML = 'You should be sleeping';
+        }
         
-        /*
+        
             var output = document.getElementById('output');
             var login = true;
             var outputHolder = '';
