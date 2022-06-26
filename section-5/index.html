@@ -6,9 +6,38 @@
     <body>
         <div id="output">Switch Statements</div>
         <script>
-            var html = "something went wrong"
+
+
+            var answer = "something went wrong"
             var output = document.getElementByid("output")
-            userChoice = prompt("heads(1) or tails(0)?")
+            var randNum = Math.floor(Math.random()*6)
+            userQuestion = prompt("what is your question?")
+            switch (randNum){
+                case 0:
+                    answer= "it will work out"
+                break;
+                case 1:
+                    answer= "maybe, maybe not"
+                break;
+                case 2:
+                    answer= "salud"
+                break;
+                case 3:
+                    answer= "you don't know all you don't know"
+                break;
+                case 4:
+                    answer= "you are not what you imagine"
+                break;
+                case 5:
+                    answer= "the world is big"
+                break;
+                default:
+                    answer= "it will be"
+
+              }
+             output.innerHTML = "You asked me" + userQuestion + <BR> "I think that" + answer
+
+/*
             var result = question == "heads" ? 1:0
             var randomNumber = Math.floor(Math.random()*2)
             if (randomNumber === result){
