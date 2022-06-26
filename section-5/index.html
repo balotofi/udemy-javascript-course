@@ -6,16 +6,18 @@
     <body>
         <div id="output">Switch Statements</div>
         <script>
+            var html = "something went wrong"
+            var output = document.getElementByid("output")
             userChoice = prompt("heads(1) or tails(0)?")
-            throw = Math.random
-            if (throw === Number(userChoice)){
-                console.log("you were correct")
+            var result = question == "heads" ? 1:0
+            var randomNumber = Math.floor(Math.random()*2)
+            if (randomNumber === result){
+                html = ("you were correct")
             }
             else{
-
+                html = ("that's wrong")
             }
-            var output = document.getElemnet
-
+            output.innerHTML = html 
 
 
 
@@ -34,7 +36,7 @@
                 case 16: 
                     html = 'dinner';
                 default:
-                    html = 'nothing togit do';
+                    html = 'nothing to do';
             }
 
             output.innerHTML = html;
