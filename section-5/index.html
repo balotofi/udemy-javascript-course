@@ -7,18 +7,46 @@
         <div id="output">Rock Paper scissors</div>
         <script>
 
-           var player = prompt("Rock, Paper, Scissors, choose")
-           var computer = Math.random
-           if (computer < 0.34){
-               computer = "rock"
-           }
-           else if (computer < 0.67){
-               computer = "paper"
-           }
-           else (computer < 0.34){
-               computer = "scissors"
-           }
-           
+            var output = document.getElementById("output")
+            var player = prompt("Rock, Paper, Scissors, choose")
+            var ps = player.charAt(0).toUpperCase()
+            var win = false
+            var computer = Math.random()
+            if (computer < 0.34){
+                computer = "rock";
+            }
+            else if (computer < 0.67){
+                computer = "paper";
+            }
+            else {
+                computer = "scissors";
+            }
+            var cs = computer.charAt(0).toUpperCase()
+            console.log(cs, ps)
+            var html = ""
+
+            if (cs == ps){
+                html += "its a TIE"
+            }else{
+                if (ps == "R"){
+                    player = "Rock";
+                    if(cs=="S"){win=true}
+                }
+                else if(ps == "P"){
+                    player = "Paper";
+                    if(cs=="R"){win=true}
+                }else{
+                    player = "Scissors";
+                    if(cs=="P"){win=true}
+                }
+                if(win){
+                    html += "Player wins"
+                }else{
+                    html += "Computer wins"
+                }
+            }
+            output.innerHTML = "Player vs Computer <br>" + player + " vs " + computer + "<br> Result " + html
+            
 /*
             var answer = "something went wrong"
             var output = document.getElementByid("output")
