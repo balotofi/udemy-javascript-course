@@ -2,15 +2,90 @@
 <html>
     <head>
         <title>The Complete Javascript Course Section 6</title>
+        <style>
+            table{border: 3px solid orange;}
+            td{border:1px solid blueviolet;}
+        </style>
     </head>
     <body>
         <div id="output"></div>
         <script>
 
             var output = document.getElementById('output');
+            var oldx = 0;
+            var newx = 0;
+            var total;
+            // get multiples exercise
+            for(var x=0; x<1000; x++){
+                if(x%5==0){
+                    while (x>0) {
+                        oldx = x - 5;
+                        newx += x;
+                        document.write(x + ' + ' + oldx + ' is ' + newx + '<br>')
+                    }
+                    //output.innerHTML = x + '<br>'
+                }
+            }
+            
+            
+            
+            
+            
+            
+            /*
+            // break and continue within loops
+            var html = '<table>';
+            var holder = 'empty';
+            for(var row = 0; row < 10; row++){
+                //if (row === 5){break;}
+                html += '<tr>';
+                for (var col = 0; col < 5; col++){
+                    html+='<td>Cell = '+ ((col+1)+(row*5)) + '='+holder+ '</td>';
+                }
+                html += '</tr>';
+                if (row === 5){continue;}
+                holder = ((col+1)+(row*5));
+            }
+            html += '</table>';
+            output.innerHTML = html;
+            
+            
+            /*
+            // nested loops
 
+            var html = '<table>';
+            
+                for(var row = 0; row < 10; row++){
+                    html += '<tr>';
+                    for (var col = 0; col < 5; col++){
+                        html+='<td>Cell = '+ ((col+1)+(row*5)) + '</td>';
+                    }
+                    html += '</tr>';
+                }
+                html += '</table>';
+                output.innerHTML = html;
+
+
+            
+            /*
+            var caloriesBananas = 89;
+            var numOfBananas = Number(prompt('how many bananas you wanna eat?'));
+            var totalCalories = 0;
+            var holder;
+            var holder2
+            for(var x=1;x<=numOfBananas;x++){
+                totalCalories += caloriesBananas;
+                holder = x > 1 ?' bananas': ' banana'
+                holder2 = x > 1 ? (x*caloriesBananas): caloriesBananas
+                output.innerHTML+='you ate '+ x + holder +' which is '+ holder2 
+                +' calories worth of bananas, your total is now ' 
+                + totalCalories+ '<br>';
+            }
+            output.innerHTML+='your total calorie count is '+ totalCalories;
+
+            /*
             // for loop
-            for(var x=0;x<31;x++){
+            for(var x=0;x<=31;x++){
                 if (x%2!==0){
                 output.innerHTML+='value of x is ='+x+'<br>';
                 }
