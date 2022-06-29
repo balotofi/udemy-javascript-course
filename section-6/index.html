@@ -1,21 +1,58 @@
 <!DOCTYPE html>
 <html>
     <head>
-        <title>The Complete Javascript Course</title>
+        <title>The Complete Javascript Course Section 6</title>
     </head>
     <body>
         <div id="output"></div>
         <script>
 
-            var output = document.getElementById("output")
-            var answer = prompt('how many time you wanna loop?')
-            var x = 0
-            do {
-                output.innerHTML += "value x ="+x+"<br>"
+            var output = document.getElementById('output');
+
+            // for loop
+            for(var x=0;x<31;x++){
+                if (x%2!==0){
+                output.innerHTML+='value of x is ='+x+'<br>';
+                }
+            }
+
+
+            /*
+            // while loop
+            var output = document.getElementById("output");
+            var password = "javascript";
+            var crackCode = prompt('whats the password');
+            while (crackCode!=password){
+                var crackCode = prompt('guess again');
+            }
+            output.innerHTML += "Final output";
+
+            /*
+            // while loop
+            var output = document.getElementById("output");
+            var password = "javascript";
+            var question = prompt('how many times you wanna loop?');
+            var x = 1;
+            while (x<question){
+                output.innerHTML+= "Value of x ="+x+ "<br>";
                 x++;
             }
-            while (x<answer)
+            output.innerHTML += "Final value of x =" +x+ "<br>"
+            /*
+            //do while loop
+            var output = document.getElementById("output")
+            var answer = prompt('how many time you wanna loop?')
+            answer = Number(answer)
+            var x = 0
+            do {
+                x++;
+                if(x%2 == 0){
+                    output.innerHTML += "value x ="+x+"<br>"
+                }
+            }
+            while (x<30)
             output.innerHTML += "final value of x ="+x+"<br>"
+            */
             
         </script>
     </body>
