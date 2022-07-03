@@ -4,18 +4,42 @@
         <title> The Complete Javascript Course Section 7</title>
     </head>
     <body>
-        <div id="output"><h2>Total Value</h2></div>
+        <div id="output"><h2>Interactive Functions</h2></div>
+        <input type="button" onclick="newFunc()" value="click me">
+        <input type="checkbox" onclick="whatNext()">
         <script>
+            
+            function newFunc(){
+                var question = prompt('what\'s your name?')
+            }
+            
+            
+            function whatNext(){
+                answer = prompt('what do you wanna do next?')
+            }
 
+        
+            /*
+        
             // functions and methods are reuseable pieces of code
             // method vs function; func can be called by name only --> defined independently
             // method is dependent on class in whish it is an object of (defined) 
             // --> class needs to be invoked before use, needs 'self'
             
             var output = document.getElementById('output');
+            
+            var a = 'hello' //global
+            output.innerHTML+= codeGreeting();
+            
+            function codeGreeting(){
+                var greet = a+' '+'world' //local
+                return greet
+            }
+            
+
+/*
             var reponse = '55'; //global var
             myFun(4,5,6);
-
             function myFun(a,b,c){
                 var reponse =  //local var
                 response = a + b + c; // global var
@@ -23,8 +47,7 @@
                 return response;
             }
             
-            
-
+*/
 
         </script>
     </body>
