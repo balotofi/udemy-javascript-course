@@ -25,7 +25,15 @@
         <script>
 
 // anonymous functions
+            var a ='bye'; // global is run last
             var output = document.getElementById('output');
+
+            (function(){
+                var a = 'bitch '; //local is run first
+                output.innerHTML=a;
+            })();
+            output.innerHTML+=a;
+
             var a = function(b){                
                 output.innerHTML = 'welcome to anonymous functions '+b;
             }
