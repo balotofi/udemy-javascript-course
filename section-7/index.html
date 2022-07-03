@@ -4,28 +4,40 @@
         <title> The Complete Javascript Course Section 7</title>
     </head>
     <body>
-        First: <input type="text" id="num1">
-        Second: <input type="text" id="num2">
-        <input type="button" onclick="addBy()" value="add">
+        <!-- First: <input type="text" id="num1">
+        Second: <input type="text" id="num2"> -->
+        <!-- <input type="button" onclick="addBy()" value="add">
         <input type="button" onclick="subtractBy()" value="subtract">
         <input type="button" onclick="multBy()" value="mult">
-        <input type="button" onclick="divideBy()" value="divide">
-        <div id="output"><h1></h1></div>
+        <input type="button" onclick="divideBy()" value="divide"> -->
+        <div id="output"><div></div>
         <!-- <div id="subhead"></div> -->
         <!-- <input type="button" onclick="newFunc()" value="click me"> -->
         <!-- <input type="checkbox" onclick="whatNext()"> -->
         <script>
 
+            output = document.getElementById('output');
+
+            var a = myFunc('hi there');
+
+            function myFunc(para){
+                if(typeof para === "undefined"){
+                    para = 'hello world';
+                }
+                output.innerHTML += para;
+                return para;
+            }
+
+
+        /*
             var output = document.getElementById('output');
             var num1 = document.getElementById('num1');
             var num2 = document.getElementById('num2');
 
             function addBy(){
-                var a = Number(num1.value);
-                var b = '+';
-                var c = Number(num2.value);
-                var total = a+c;
-                outHTML(a,b,c, total)
+                var a = num1.value + ' + ' + num2.value;
+                var bm = Number(num1.value) + Number(num2.value);
+                outHTML(a,b)
             }
             
             function subtractBy(){
