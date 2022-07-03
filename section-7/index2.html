@@ -8,6 +8,27 @@
         <script>
             //Remove Duplicates
 
+            output = document.getElementById('output');
+
+            var myArray = ['bye', 'bitch', 564546, 
+            345.67, 'Python','bye', 'bitch', 564546, 345.67, 'Python', 
+            'bye', 'bitch', 564546, 345.67, 'Python',];
+
+            var myArrayClean = removeDupes(myArray);
+            output.innerHTMLN= myArray='<br>'+myArrayClean;            
+
+            function removeDupes(arr){
+                var cArray = [];
+                var cObject = {};
+                console.log(arr[x])
+                for(var x=0;x<arr.length;x++){
+                    cObject[arr[x]]='whatever'
+                }
+                console.log(cObject)
+
+                return cArray;
+            }
+
         </script>
     </body>
 </html>
