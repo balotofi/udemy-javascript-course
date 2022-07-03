@@ -4,21 +4,28 @@
         <title> The Complete Javascript Course Section 7</title>
     </head>
     <body>
-        <div id="output"><h2>Interactive Functions</h2></div>
+        <div id="output"><h1>Interactive Functions</h1></div>
+        <div id="subhead"></div>
         <input type="button" onclick="newFunc()" value="click me">
         <input type="checkbox" onclick="whatNext()">
         <script>
+
+            var adj = ['super', 'wonderful', 'bad', 'angry', 'careful'];
+            var output = document.getElementById('output');
+            var subhead = document.getElementById('subhead');
             
             function newFunc(){
-                var question = prompt('what\'s your name?')
+                var nameAdj = Math.floor(Math.random()*adj.length)
+                var yourName = prompt('what\'s your name?')
+                subhead.innerHTML += adj[nameAdj] +' '+ yourName + '<br>'
             }
-            
             
             function whatNext(){
-                answer = prompt('what do you wanna do next?')
+                nextMove = prompt('what do you wanna do next?')
+                return nextMove
             }
 
-        
+
             /*
         
             // functions and methods are reuseable pieces of code
