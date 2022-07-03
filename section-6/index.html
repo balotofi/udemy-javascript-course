@@ -8,22 +8,34 @@
         </style>
     </head>
     <body>
-        <div id="output"></div>
+        <div id="output"><h2>Shopping List</h2></div>
         <script>
 
             var output = document.getElementById('output');
             var items = [];
-            var addItem = prompt('type your item');
-            var numOfItems = prompt ('how many items youu wann add?');
-            for(var x = 0; x<document.length; x==){
-                output.innerHTML(document[x])
+            var numOfItems = prompt ('how many items youu wanna add?');
+            var addItem;
+            for (var x=0; x<=Number(numOfItems-1); x++){
+                addItem = prompt('type your item')
+                if (addItem == 'no') {break;}
+                items.push(addItem);
+            }
+            for (item of items){
+                output.innerHTML+='the ' + item.indexOf + ' item is ' + item + '<br>';
+            }
 
+            
+            for(var x in document){
+                output.innerHTML(x +'is'+document[x]+'<br>')
             }
             
-            
-            var fruits = {a:'melon', b:'orange',c:'apple',d:'banana'}
+            var fruits = ['melon','orange','apple','banana'];          
+            for(var x=0; x<fruits.length; x++){
+                output.innerHTML+=x +'is'+document[x]
+            }
+
             for (value of fruits){
-                output.innerHTML('the value is'+value+'<br>');
+                output.innerHTML+='the value is'+value+'<br>';
             }
 
 
@@ -45,11 +57,8 @@
                 }
             }
             
-<<<<<<< HEAD
-=======
             //Redo and move onto section 7
             
->>>>>>> 92af27333217d7d5d1db2e940e9cfa91764241a1
             /*
             // break and continue within loops
             var html = '<table>';
