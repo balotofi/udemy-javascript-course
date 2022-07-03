@@ -20,11 +20,15 @@
             function removeDupes(arr){
                 var cArray = [];
                 var cObject = {};
-                console.log(arr[x])
+                var z = '';
+                // console.log(arr[x])
                 for(var x=0;x<arr.length;x++){
                     cObject[arr[x]]='whatever'
                 }
                 console.log(cObject)
+                for(z in cObject){
+                    cArray.push(z)
+                }
 
                 return cArray;
             }
