@@ -22,8 +22,33 @@
         <input type="button" onclick="crack()" value="Try Code">
         <br> -->
         <div id="output"></div>
+        <input type="button" onclick="start()" value="start game">
         <script>
 
+            var secretWord = 'JavaScript'
+            var output = document.getElementById('output');
+
+            function start(){
+                getSecret(prompt('what is the word?'));
+            }
+            
+            function getSecret(secret){
+                if(secret==secretWord){
+                    output.innerHTML='you are correct';
+                }else{
+                    getSecret(prompt('guess again'));
+
+                }
+            }
+
+
+
+
+
+
+
+
+/*
 // anonymous functions
             var a ='bye'; // global is run last
             var output = document.getElementById('output');
