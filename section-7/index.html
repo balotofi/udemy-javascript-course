@@ -25,15 +25,17 @@
         <input type="button" onclick="start()" value="start game">
         <script>
 
-            var secretWord = 'JavaScript'
+            var secretWord = ['JavaScript', 'Python', 'Ruby', 'Go']
+            var mysteryNum;
             var output = document.getElementById('output');
 
             function start(){
+                mysteryNum = Math.floor(Math.random()*secretWord.length);
                 getSecret(prompt('what is the word?'));
             }
             
             function getSecret(secret){
-                if(secret==secretWord){
+                if(secret==secretWord(mysteryNum)){
                     output.innerHTML='you are correct';
                 }else{
                     getSecret(prompt('guess again'));
