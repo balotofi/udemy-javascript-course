@@ -7,6 +7,9 @@
         First: <input type="text" id="num1">
         Second: <input type="text" id="num2">
         <input type="button" onclick="addBy()" value="add">
+        <input type="button" onclick="subtractBy()" value="subtract">
+        <input type="button" onclick="multBy()" value="mult">
+        <input type="button" onclick="divideBy()" value="divide">
         <div id="output"><h1></h1></div>
         <!-- <div id="subhead"></div> -->
         <!-- <input type="button" onclick="newFunc()" value="click me"> -->
@@ -16,9 +19,43 @@
             var output = document.getElementById('output');
             var num1 = document.getElementById('num1');
             var num2 = document.getElementById('num2');
+
             function addBy(){
-                ;
+                var a = Number(num1.value);
+                var b = '+';
+                var c = Number(num2.value);
+                var total = a+c;
+                outHTML(a,b,c, total)
             }
+            
+            function subtractBy(){
+                var a = Number(num1.value);
+                var b = '-';
+                var c = Number(num2.value);
+                var total = a-c;
+                outHTML(a,b,c, total)
+            }
+            
+            function multBy(){
+                var a = Number(num1.value);
+                var b = '*';
+                var c = Number(num2.value);
+                var total = a*c;
+                outHTML(a,b,c, total)
+            }
+            
+            function divideBy(){
+                var a = Number(num1.value);
+                var b = '/';
+                var c = Number(num2.value);
+                var total = a/c;
+                outHTML(a,b,c, total)
+            }
+            
+            function outHTML(a,b,c, total){
+                    output.innerHTML = a+' '+b+' '+c+' = '+total+'<br>';
+                }
+
 
 /*
             var adj = ['super', 'wonderful', 'bad', 'angry', 'careful'];
