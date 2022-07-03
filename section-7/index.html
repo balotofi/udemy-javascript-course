@@ -14,16 +14,24 @@
         <!-- <div id="subhead"></div> -->
         <!-- <input type="button" onclick="newFunc()" value="click me"> -->
         <!-- <input type="checkbox" onclick="whatNext()"> -->
-        Code:
-        <input type="text" id="code1">
+        <!-- Code: -->
+        <!-- <input type="text" id="code1">
         <input type="text" id="code2">
         <input type="text" id="code3">
         <br>
         <input type="button" onclick="crack()" value="Try Code">
-        <br>
+        <br> -->
         <div id="output"></div>
         <script>
 
+// anonymous functions
+            var output = document.getElementById('output');
+            var a = function(b){                
+                output.innerHTML = 'welcome to anonymous functions '+b;
+            }
+
+
+            /*
             var cCode = [];
             var count = 0;
             var output = document.getElementById('output');
@@ -43,7 +51,7 @@
                     output.innerHTML+= checkNum(guess[x], cCode[x]);
                 }
                 if(count==3){
-                    output.innerHTML+='you guessed it <br>';
+                    output.innerHTML+=' you guessed it <br>';
                 }else{
                     output.innerHTML+='<br>';                    
                 }
