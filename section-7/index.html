@@ -22,10 +22,26 @@
         <input type="button" onclick="crack()" value="Try Code">
         <br> -->
         <div id="output"></div>
-        <input type="button" onclick="start()" value="start game">
+        <!-- <input type="button" onclick="start()" value="start game"> -->
         <script>
 
+            // function scope
+
+            var outsideFunc = 'outside'
+
+            function myFunc(){
+                var insideFunc='inside'; //declaring without var makes it accessible outside the function --> auto matically gets turned into global variable
+                console.log(outsideFunc);
+                console.log(insideFunc);
+            }
             
+            myFunc()
+            console.log(outsideFunc);
+            console.log(insideFunc);
+
+
+
+            /*
             var secretWord = ['JavaScript', 'Python', 'Ruby', 'Go', 'a', 'website', 3, 4, 5, 6, 5664, 1232];
             var output = document.getElementById('output');
 
