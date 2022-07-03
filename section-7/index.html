@@ -25,9 +25,24 @@
         <input type="button" onclick="start()" value="start game">
         <script>
 
+            
             var secretWord = ['JavaScript', 'Python', 'Ruby', 'Go']
-            var mysteryNum;
             var output = document.getElementById('output');
+
+            function start(){
+                shuffleArray(secretWord);
+                output.innerHTML+=secretWord+'<br>';
+            }
+            function shuffleArray(arr){
+                for(var x=arr.length-1;x>0;x--){
+                    var holder=Math.floor(Math.random()*(x+1));
+                    var temp = arr[x];
+                }
+                return arr;
+            }
+
+            /*
+            var mysteryNum;
 
             function start(){
                 mysteryNum = Math.floor(Math.random()*secretWord.length);
