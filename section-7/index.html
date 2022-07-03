@@ -35,9 +35,17 @@
                 cCode.push(Math.floor(Math.random()*9));
             }
             output.innerHTML = cCode
-            
+
             function crack(){
-                null;
+                count=0;
+                var guess = [c1.value, c2.value, c3.value];
+                for(var x=0; x<cCode.length; x++){
+                    output.innerHTML+= checkNum(guess[x], cCode[x]);
+                }
+            }
+
+            function checkNum(a,b){
+                
             }
 
 /*
