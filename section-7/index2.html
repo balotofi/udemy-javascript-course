@@ -6,9 +6,22 @@
     <div id="output"></div>
     <body>
         <script>
-            //Remove Duplicates
 
-            output = document.getElementById('output');
+            var output = document.getElementById('output');
+            var a = 1000;
+
+            function outsideFunc(){
+                var b = 2000;
+                function insideFunc(){
+                    b++;
+                }
+            }
+
+
+
+/*
+//Remove Duplicates
+
 
             var myArray = ['bye', 'bitch', 564546, 
             345.67, 'Python','bye', 'bitch', 564546, 345.67, 'Python', 
@@ -32,7 +45,7 @@
 
                 return cArray;
             }
-
+*/
         </script>
     </body>
 </html>
