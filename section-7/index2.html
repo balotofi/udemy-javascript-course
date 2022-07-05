@@ -8,15 +8,26 @@
         <script>
 
             var output = document.getElementById('output');
-            var a = 1000;
+            var a = 1000;//global space
 
             function outsideFunc(){
                 var b = 2000;
                 function insideFunc(){
-                    b++;
+                    b++; //within local space
+                    return b;
                 }
+                insideFunc()
+                var c = insideFunc()
+                var d = function(){
+                    b++
+                    return b
+                }
+                d()
+                var e = d()
+                console.log(b);
             }
-
+            outsideFunc()
+            
 
 
 /*
