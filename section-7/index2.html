@@ -4,14 +4,37 @@
         <title> Complete JavaScript Course Section 7 </title>
     </head>
     <body>
-        <input type="text" id="item">
-        <br>
-        <input type="button" onClick="addItem()" value="add item">
+        <!-- <input type="text" id="item">
+            <br>
+            <input type="button" onClick="addItem()" value="add item"> -->
+        <input type="text" id="num2">
+        <input type="button" onclick="addBy()" value="add">
+        <input type="button" onclick="subtractBy()" value="subtract">
+        <input type="button" onclick="multBy()" value="mult">
+        <input type="button" onclick="divideBy()" value="divide">
         <br>
         <div id="output"></div>
 
         <script>
 
+            //function callbacks
+            var output = document.getElementById('output')
+            function makeMessage(s1,s2,callback){
+                var result1 = callback(s1,s2)
+                output.innerHTML+=result1
+            }
+
+            makeMessage('hello','world', function(s1, s2){
+                var result2 = s1+s2+'worked'
+                return result2
+            })
+
+            makeMessage('java','Script', function(s1, s2){
+                var result2 = s1+s2+'is great'+s1
+                return result2
+            })
+
+/*
             var shopList = []
             
             function addItem(){
@@ -31,6 +54,7 @@
 
 
 /*
+           //recursive functions
             var output = document.getElementById('output');
             var a = 1000;//global space
 
