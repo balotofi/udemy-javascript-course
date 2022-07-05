@@ -3,10 +3,34 @@
     <head>
         <title> Complete JavaScript Course Section 7 </title>
     </head>
-    <div id="output"></div>
     <body>
+        <input type="text" id="item">
+        <br>
+        <input type="button" onClick="addItem()" value="add item">
+        <br>
+        <div id="output"></div>
+
         <script>
 
+            var shopList = []
+            
+            function addItem(){
+                var item = document.getElementById('item').value
+                shopList.push(item)
+                outputList()
+            }
+
+            function outputList(){
+                var html = ''
+                var output = document.getElementById('output')
+                for(var x = 0; x<shopList.length; x++){
+                    html += (x+1) + '.' + shopList[x] + '<br>'
+                }
+                output.innerHTML =  html
+            }
+
+
+/*
             var output = document.getElementById('output');
             var a = 1000;//global space
 
@@ -26,6 +50,8 @@
                 var e = d()
                 console.log(b);
             }
+            outsideFunc()
+            outsideFunc()
             outsideFunc()
             
 
