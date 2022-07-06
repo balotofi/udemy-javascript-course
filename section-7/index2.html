@@ -7,16 +7,35 @@
         <!-- <input type="text" id="item">
             <br>
             <input type="button" onClick="addItem()" value="add item"> -->
-        <input type="text" id="num2">
+        First: <input type="text" id="num1">
+        Second: <input type="text" id="num2">
+        <br>
         <input type="button" onclick="addBy()" value="add">
         <input type="button" onclick="subtractBy()" value="subtract">
-        <input type="button" onclick="multBy()" value="mult">
+        <input type="button" onclick="multBy()" value="multiply">
         <input type="button" onclick="divideBy()" value="divide">
         <br>
         <div id="output"></div>
 
         <script>
+            var output = document.getElementById('output')
+            var num1 = document.getElementById('num1')
+            var num2 = document.getElementById('num2')
+            
+                function addBy(){
+                    outC(num1.value, num2.value,'+', function(a,b){
+                        return a + b
+                    })
+                    
+                }
 
+                function outC(a,b,s,cback){
+                    var result = cback(Number(a),Number(b))
+                    output.innerHTML += a +' '+s+' '+b+'='+result+'<br>'
+                }
+
+
+/*
             //function callbacks
             var output = document.getElementById('output')
             function makeMessage(s1,s2,callback){
