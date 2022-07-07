@@ -30,18 +30,15 @@
 //card deck exercise
         var cardSuites= ['spades', 'hearts', 'clubs', 'diams'];
         var cardFace= ['2', '3', '4', '5', '6', '7', '8', '9', '10', 'J', 'Q', 'K', 'A'];
-        var cards= [];
         var players= [];
 
             function startDeal(){
                 players=[];
-                cards=[];
                 var num = Number(document.getElementById('players').value)
                 for(var i=0; i<num; i++){
                     players[i]=[];
                 }
-                buildDeck();
-                console.log(cards);
+                var cards = buildDeck();
                 shuffleCards(cards);
                 dealCards(cards);
 
@@ -49,6 +46,7 @@
             }
 
             function buildDeck(){
+                var cards = [];
                 for(suit in cardSuites){
                     var bgColor = (cardSuites[suit] == 'hearts' || cardSuites[suit] == 'diams') ? 'red': 'black'
                     for(face in cardFace){
@@ -60,6 +58,7 @@
                         cards.push(card);
                     }
                 }
+                return cards;
             }
             
             function shuffleCards(array){
@@ -72,7 +71,7 @@
                 return array;
             }
 
-            function dealCards(){
+            function dealCards(cards){
                 var num = players.length;
                 var output = document.getElementById('message');
                 var p = 0;
