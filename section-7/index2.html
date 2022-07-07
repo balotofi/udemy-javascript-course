@@ -20,10 +20,7 @@
         <div id="wrapper">
             <div id="start"></div> How many players?
             <input type="number" id="players" min="1" max="5" value="3">
-            <button id="btnDeal" type="button" onclick="dealCards()">Deal</button>
-            <button id="btnDeal" type="button" onclick="buildDeck()">Deal</button>
-            <button id="btnDeal" type="button" onclick="buildPlayers()">Deal</button>
-            <button id="btnDeal" type="button" onclick="shuffleCards()">Deal</button>
+            <button id="btnDeal" type="button" onclick="startDeal()">Deal</button>
             <div id="message"></div>
         </div>
 
@@ -36,13 +33,35 @@
         var cards= [];
         var players= [];
 
-            function dealCards(){}
+            function startDeal(){
+                players=[];
+                cards=[];
+                var num = Number(document.getElementById('players').value)
+                buildDeck();
+                console.log(cards);
+                shuffleCards();
+                dealCards();
 
-            function buildDeck(){}
+
+            }
+
+            function buildDeck(){
+                for(suit in cardSuites){
+                    var bgColour = (cardSuites[suit] == 'hearts' || cardSuites[suit] == 'diams') ? 'red': 'black'
+                    for(face in cardFace){
+                        var card = {
+                            suites:cardSuites[suit],
+                            num :cardFace[face],
+                            bgColour : bgColour,
+                        }
+                        cards.push(card);
+                    }
+                }
+            }
             
-            function buildPlayers(){}
-
             function shuffleCards(){}
+
+            function dealCards(){}
 
 
 
