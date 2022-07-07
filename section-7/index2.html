@@ -50,12 +50,12 @@
 
             function buildDeck(){
                 for(suit in cardSuites){
-                    var bgColour = (cardSuites[suit] == 'hearts' || cardSuites[suit] == 'diams') ? 'red': 'black'
+                    var bgColor = (cardSuites[suit] == 'hearts' || cardSuites[suit] == 'diams') ? 'red': 'black'
                     for(face in cardFace){
                         var card = {
                             suites : cardSuites[suit],
                             num : cardFace[face],
-                            bgColour : bgColour,
+                            bgColor : bgColor,
                         }
                         cards.push(card);
                     }
@@ -80,6 +80,14 @@
                     players[p].push(cards[i]);
                     p++;
                     if(p>=num){p=0;}
+                    }
+                    for(var i=0;i<num;i++){
+                        output.innerHTML += '<br>Players: '+(i+1)+'<br>';
+                        for(var x=0; x<players[i].length;x++){
+                        var p = players[i][x];
+                        output.innerHTML += '<span style=\'color,'+p.bgColor+'\'>'+p.num+'&'+p.suites+',</span>';
+                        }
+                        output.innerHTML += '<br>';
                     }
                 }
 
