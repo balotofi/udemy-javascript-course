@@ -37,6 +37,9 @@
                 players=[];
                 cards=[];
                 var num = Number(document.getElementById('players').value)
+                for(var i=0; i<num; i++){
+                    players[i]=[];
+                }
                 buildDeck();
                 console.log(cards);
                 shuffleCards(cards);
@@ -69,7 +72,17 @@
                 return array;
             }
 
-            function dealCards(){}
+            function dealCards(){
+                var num = players.length;
+                var output = document.getElementById('message');
+                var p = 0;
+                for(var i = 0; i<cards.length; i++){
+                    players[p].push(cards[i]);
+                    p++;
+                    if(p>=num){p=0;}
+                    }
+                }
+
 
 
 
