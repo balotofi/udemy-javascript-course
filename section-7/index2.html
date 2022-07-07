@@ -14,10 +14,20 @@
         <input type="button" onclick="subBy()" value="subtract">
         <input type="button" onclick="multBy()" value="multiply">
         <input type="button" onclick="divBy()" value="divide">
+        <input type="button" onclick="modBy()" value="modulus">
         <br>
         <div id="output"></div>
 
         <script>
+
+
+
+
+
+
+
+/*
+          // callback calculator
             var output = document.getElementById('output')
             var num1 = document.getElementById('num1')
             var num2 = document.getElementById('num2')
@@ -37,7 +47,7 @@
                 }
 
                 function multBy(){
-                    outC(num1.value, num2.value,'*', function(a,b){
+                    outC(num1.value, num2.value,'x', function(a,b){
                         return a * b
                     })
                     
@@ -46,6 +56,13 @@
                 function divBy(){
                     outC(num1.value, num2.value,'/', function(a,b){
                         return a / b
+                    })
+                    
+                }
+
+                function modBy(){
+                    outC(num1.value, num2.value,'%', function(a,b){
+                        return a % b
                     })
                     
                 }
