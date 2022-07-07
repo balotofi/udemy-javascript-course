@@ -39,8 +39,8 @@
                 var num = Number(document.getElementById('players').value)
                 buildDeck();
                 console.log(cards);
-                shuffleCards();
-                dealCards();
+                shuffleCards(cards);
+                dealCards(cards);
 
 
             }
@@ -50,8 +50,8 @@
                     var bgColour = (cardSuites[suit] == 'hearts' || cardSuites[suit] == 'diams') ? 'red': 'black'
                     for(face in cardFace){
                         var card = {
-                            suites:cardSuites[suit],
-                            num :cardFace[face],
+                            suites : cardSuites[suit],
+                            num : cardFace[face],
                             bgColour : bgColour,
                         }
                         cards.push(card);
@@ -59,7 +59,15 @@
                 }
             }
             
-            function shuffleCards(){}
+            function shuffleCards(array){
+                for (var x = array.length -1; x>0; x--){
+                    var ii = Math.floor(Math.random()*(x+1));
+                    var temp = array[x];
+                    array[x] = array[ii];
+                    array[ii] = temp;
+                }
+                return array;
+            }
 
             function dealCards(){}
 
