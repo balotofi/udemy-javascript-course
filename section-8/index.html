@@ -9,11 +9,15 @@
             
 
 
-            condole.dir(window);
+            output = document.getElementById('wrapper');
+
+            console.dir(window);
 
             for (var prop in window){
-                docment.write(prop+' '+window[prop]+'<br>');
+                document.write(prop+' '+window[prop]+'<br>');
             }
+            output.innerHTML += window.innerHeight+' '+window.innerWidth;
+
         </script>
     </body>
 </html>
