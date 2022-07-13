@@ -11,17 +11,26 @@
         <a href="index.html">index</a>
         <input type="button" onclick="goBack()" value="Back"> //user defined function
         <input type="button" onclick="prompt('hello world!')' value= "Prompt"> // in-built function 
-        <input type="button" onclick="print()" value="Print"> // in-built function 
+        <input type="button" onclick="print()" value="Print"> // in-built function       
+        <input type="button" onclick="setInt()" value="Start"> // in-built function 
+        <input type="button" onclick="clearInt()" value="Clear"> // in-built function 
         <script>
 
             // Settimeoutmethod
             var output = document.getElementById('wrapper');
             var myTimer;
             function setInt (){
-            myTimer = window.setTimeout(myPopoup, 1000)
+            myTimer = window.setTimeout(myPopup, 1000)
+            }
+
+            function clearInt(){
+            window.clearInterval(myTimer);
             }
 
 
+            function myPopup(){
+            alert('hello');
+            }
 
 
 
