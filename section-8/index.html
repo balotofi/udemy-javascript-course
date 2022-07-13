@@ -3,14 +3,26 @@
     <head>
         <title>The Complete JavaScript Course Section 8</title>
     </head>
-          <div id="output"></div>
+        <!-- <div id="output"></div> -->
     <body>
         <div id='wrapper'></div>
+        <a href="index3.html">index3</a>
+        <a href="index2.html">index2</a>
+        <a href="index.html">index</a>
+        <input type="button" onclick="goBack()" value="Back">
         <script>
+
+            //window history 
             
+            var output = document.getElementById('wrapper');
 
-
-            output = document.getElementById('wrapper');
+            function goBack(){
+                window.history.go(-1);
+            }
+            
+            
+            /*
+            var output = document.getElementById('wrapper');
 
             console.dir(window);
 
