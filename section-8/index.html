@@ -19,6 +19,14 @@
             }
             output.innerHTML += window.innerHeight+' '+window.innerWidth;
             
+            output.innerHTML += window.location;
+
+            // alert('hello');
+
+            var w = window.open('index2.html')
+            w.onbeforeunload = function(){
+                alert('don\'t go anywhere');
+            }
             
         </script>
     </body>
